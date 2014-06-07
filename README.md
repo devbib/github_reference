@@ -42,6 +42,11 @@ Or even better: It would be great if you would simply fork this project and send
 	
 	- [Remove files from commit](#committing_remove)
 
+	- [View the commit log with different levels of detail](#committing_log)
+
+	- [Summarizing/squashing commits](#committing_squash)
+
+
 
 
 <hr>
@@ -227,3 +232,100 @@ Shorthand for adding all files and committing them in 1 command
 Removes staged (`add`ed files from the commit)
 
 	git rm --cached <file>
+	
+<br>
+<br>
+
+<a id='committing_log'></a>
+
+#### View the commit log with different levels of detail
+
+[[back to top]](#sections)
+
+1) one line
+
+	$git log --pretty=oneline
+	
+	7d8d551bc3c244659e5fef20bf5cf9cbe4db9f3c changes to a.txt
+	ca6b353428d78dd3d8f03f03ee6128df703462d9 created a.txt and b.txt
+	
+2) short	
+	
+	$git log --pretty=short
+	
+	commit 7d8d551bc3c244659e5fef20bf5cf9cbe4db9f3c
+	Author: rasbt <se.raschka@me.com>
+
+    changes to a.txt
+
+3) full
+
+	$git log --pretty=full
+
+	commit 7d8d551bc3c244659e5fef20bf5cf9cbe4db9f3c
+	Author: rasbt <se.raschka@me.com>
+	Commit: rasbt <se.raschka@me.com>
+
+    changes to a.txt
+    
+4) fuller
+
+	$git log --pretty=fuller
+
+	commit 7d8d551bc3c244659e5fef20bf5cf9cbe4db9f3c
+	Author:     rasbt <se.raschka@me.com>
+	AuthorDate: Sat Jun 7 11:34:00 2014 -0400
+	Commit:     rasbt <se.raschka@me.com>
+	CommitDate: Sat Jun 7 11:34:00 2014 -0400
+
+    changes to a.txt
+    
+    
+<br>
+<br>
+
+<a id='committing_squash'></a>   
+    
+#### Summarizing/squashing commits
+ 
+[[back to top]](#sections)
+ 
+**Warning:** This should only be done for local commits that you haven't been uploaded to a remote, yet.
+
+Here, we want to squash those 3 commits into 1 single one to keep the commit history "lean":
+
+	$git log --pretty=oneline
+	
+	d3abc1933ed9782ddae0ef07505b2a0cd54dbe77 changes to a again
+	7d8d551bc3c244659e5fef20bf5cf9cbe4db9f3c changes to a.txt
+	ca6b353428d78dd3d8f03f03ee6128df703462d9 created a.txt and b.txt
+	
+	
+We will use `rebase` for the `HEAD` (latest commit) up to 3 commits ago `HEAD~3`
+
+	$git rebase -i HEAD~3
+	
+And editor will open with the following example contents:
+
+	pick 3abc193 changes to a again
+	pick 7d8d551 changes to a.txt
+	pick ca6b353 created a.txt and b.txt
+
+	# Rebase d3abc1..4dbe77 onto 60709da
+	#
+	# Commands:
+	#  p, pick = use commit
+	#  e, edit = use commit, but stop for amending
+	#  s, squash = use commit, but meld into previous commit
+	#
+	# If you remove a line here THAT COMMIT WILL BE LOST.
+	# However, if you remove everything, the rebase will be aborted.
+	#
+	
+Now, we change the first 3 lines to summarize all 3 commits into the latest commit:
+
+	pick 3abc193 changes to a again
+	squash 7d8d551 changes to a.txt
+	squash ca6b353 created a.txt and b.txt
+	
+After we save and close the editor, a new editor window will open where we can modify the commit message and the `rebase` should be successfully completed.
