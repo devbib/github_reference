@@ -1,7 +1,15 @@
 github_reference
 ================
 
-A collection of useful GitHub commands and procedures
+#### About this repository
+
+This repository is meant to be a collection of useful commands, tools, and tips & tricks around Git and GitHub.  
+There are a lot of the not-so-basic things I have to look up in certain cases, or particular questions people are asking me. This repository should serve as a place to collect all those things.
+
+#### I am looking forward to your contributions, suggestions, and ideas
+
+If you have any suggestions or want to make additions, I would be very happy if you could send me an [email](mailto:se.raschka@gmail.com), leave me a message on [google+](https://plus.google.com/118404394130788869227/), or even send me a tweet on [twitter](https://twitter.com/rasbt) (given you can fit it within the 140 character limit ;)).  
+Or even better: It would be great if you would simply fork this project and send me a pull request.
 
 <br>
 <br>
@@ -11,6 +19,8 @@ A collection of useful GitHub commands and procedures
 <a id='sections'></a>
 
 ## Sections
+
+- [Links to useful external resources](#links)
 
 - [Pull and fetch & merge changes](#pull_fetch_merge)
 
@@ -35,6 +45,31 @@ A collection of useful GitHub commands and procedures
 
 
 <hr>
+
+<br>
+<br>
+
+
+<a id='links'></a>
+
+## Links to useful external resources
+
+[[back to top]](#sections)
+
+####[Git Cheat Sheet](http://byte.kde.org/~zrusin/git/git-cheat-sheet-medium.png)
+This cheat sheet is probably something that you want to print out and pin to your wall right next to your monitor: All the most important Git commands on one page.
+
+
+####[git - the simple guide](http://rogerdudler.github.io/git-guide/)
+A very brief overview of the Git essentials as it headline says: "just a simple guide for getting started with git. no deep shit ;)".  
+In my opinion it is a little bit too "concise" to be a good introduction to Git for absolute beginners, but I think that this is a very good look-up reference for people who are just getting started.
+
+####[Pro Git](http://git-scm.com/book)
+Probably the most thorough resource about Git you can find. Its 200+ pages (in the free PDF eBook version) might be a little bit overwhelming for Git newbies, but I would still recommend the first 2 chapter as a good introduction to Git - and the rest of the book to the more advanced users.
+
+
+####[help.github.com](https://help.github.com)
+GitHub help pages are especially useful for everything that is about setting up a connection to the GitHub servers and managing	 your repositories.
 
 <br>
 <br>
