@@ -28,6 +28,8 @@ Or even better: It would be great if you would simply fork this project and send
 	
 	- [Force to overwrite local files](#force_overwrite)
 	
+	- [Purging a file or directory from the entire git history](#purge_hist)
+	
 - [Connecting to GitHub and GitLab](#connecting)
 
 	- [Connecting to GitHub and GitLab servers via SSH](#ssh)
@@ -118,7 +120,25 @@ Fetches the most recent files from the remote and resets the master branch to th
 	git fetch --all
 	git reset --hard origin/master
 	
+
+<a id='purge_hist'></a>
+
+<br>
+<br>
+
+### Purging a file or directory from the entire git history
+
+[[back to top]](#sections)	
+
+Deleting a file or directory from the Git history is - in my opinion - was an option that was not intended by its creator. However, sometimes large binary files can cause a repository to grow over multiple Gigabytes in size, and in this case it might be useful to delete those.
+
+	git filter-branch --prune-empty --index-filter 'git rm -rf --cached --ignore-unmatch MY-BIG-DIRECTORY-OR-FILE' --tag-name-filter cat -- --all
 	
+(for more info, see the original [article](http://naleid.com/blog/2012/01/17/finding-and-purging-big-files-from-git-history))	
+	
+After that, you might want to commit your changes and clone the "slimmer" repository:
+
+	git clone --no-hardlinks file:///Users/yourUser/your/full/repo/path repo-clone-name	
 	
 <br>
 <br>
