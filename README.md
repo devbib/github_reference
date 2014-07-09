@@ -1,6 +1,8 @@
 github_reference
 ================
 
+
+
 #### About this repository
 
 This repository is meant to be a collection of useful commands, tools, and tips & tricks around Git and GitHub.  
@@ -20,7 +22,7 @@ Or even better: It would be great if you would simply fork this project and send
 
 ## Sections
 
-- [Links to useful external resources](#links)
+- [Links to useful external resources](#links-to-useful-external-resources)
 
 - [Pull and fetch & merge changes](#pull_fetch_merge)
 
