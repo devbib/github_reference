@@ -1,13 +1,25 @@
+
 Sebastian Raschka  
 last updated: 06/01/2014
 
+#Table of Contents
+
+- [generate a private/public key pair](#generate-a-privatepublic-key-pair)
+- [Add SSH keys to GitLab/GitHub SSH keys](#add-ssh-keys-to-gitlabgithub-ssh-keys)
+- [Add the content below to ~/.ssh/config](#add-the-content-below-to-sshconfig)
+- [Create a new repository on GitHub/GitLab](#create-a-new-repository-on-githubgitlab)
+
+
+
 #Connecting to GitHub and GitLab servers via SSH
+
 
 
 <br>
 <br>
 
 ## generate a private/public key pair
+[[back to top](#table-of-contents)]
 
 The private/public key pairs are usually stored in the user's home directory under the (invisible) directory `.ssh/`.
 
@@ -50,6 +62,7 @@ Identity added: id_rsa (id_rsa)
 <br>
 
 ##Add SSH keys to GitLab/GitHub SSH keys
+[[back to top](#table-of-contents)]
 
 Copy the content from `id_rsa.pub` and add them to the SSH keys on GitHub/GitLab.
 	
@@ -69,6 +82,7 @@ e.g.,
 <br>
 
 ## Add the content below to ~/.ssh/config
+[[back to top](#table-of-contents)]
 
 Replace the example information in the following lines and add them to the `.ssh/config` file:
 
@@ -83,6 +97,7 @@ User username
 <br>
 
 ## Create a new repository on GitHub/GitLab
+[[back to top](#table-of-contents)]
 
 Create new repository on GitHub/GitLab:
 
