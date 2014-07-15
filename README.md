@@ -1,14 +1,40 @@
-#github_reference
 
+#Table of Contents
+
+- [About this repository](#about-this-repository)
+    
+- [Pull and fetch & merge changes](#pull-and-fetch-merge-changes)
+    - [Automatic pull for subdirectories](#automatic-pull-for-subdirectories)
+    - [Force to overwrite local files](#force-to-overwrite-local-files)
+    - [Purging a file or directory from the entire git history](#purging-a-file-or-directory-from-the-entire-git-history)
+- [Connecting to GitHub and GitLab](#connecting-to-github-and-gitlab)
+    - [Connecting to GitHub and GitLab servers via SSH](#connecting-to-github-and-gitlab-servers-via-ssh)
+- [Branching](#branching)
+    - [Branching Basics](#branching-basics)
+- [Committing Changes](#committing-changes)
+    - [Committing Basics](#committing-basics)
+    - [Remove files from commit](#remove-files-from-commit)
+    - [View the commit log with different levels of detail](#view-the-commit-log-with-different-levels-of-detail)
+    - [Summarizing/squashing commits](#summarizing-squashing-commits)
+- [Links to useful external resources](#links-to-useful-external-resources)
+
+
+
+<br>
+<br>
+<br>
+<br>
 
 
 
 #### About this repository
+[[back to top](#table-of-contents)]
 
 This repository is meant to be a collection of useful commands, tools, and tips & tricks around Git and GitHub.  
 There are a lot of the not-so-basic things I have to look up in certain cases, or particular questions people are asking me. This repository should serve as a place to collect all those things.
 
 #### I am looking forward to your contributions, suggestions, and ideas
+[[back to top](#table-of-contents)]
 
 If you have any suggestions or want to make additions, I would be very happy if you could send me an [email](mailto:se.raschka@gmail.com), leave me a message on [google+](https://plus.google.com/118404394130788869227/), or even send me a tweet on [twitter](https://twitter.com/rasbt) (given you can fit it within the 140 character limit ;)).  
 Or even better: It would be great if you would simply fork this project and send me a pull request.
@@ -17,38 +43,6 @@ Or even better: It would be great if you would simply fork this project and send
 <br>
 
 <hr>
-
-
-## Sections
-
-- [Links to useful external resources](#links-to-useful-external-resources)
-
-- [Pull and fetch & merge changes](#pull_fetch_merge)
-
-	- [Automatic pull for subdirectories](#auto_pull)
-	
-	- [Force to overwrite local files](#force_overwrite)
-	
-	- [Purging a file or directory from the entire git history](#purge_hist)
-	
-- [Connecting to GitHub and GitLab](#connecting)
-
-	- [Connecting to GitHub and GitLab servers via SSH](#ssh)
-
-- [Branching](#branching)
-
-	- [Branching basics](#branching_basics)
-	
-- [Committing changes](#committing)
-
-	- [Committing basics](#committing_basics)
-	
-	- [Remove files from commit](#committing_remove)
-
-	- [View the commit log with different levels of detail](#committing_log)
-
-	- [Summarizing/squashing commits](#committing_squash)
-
 
 
 
@@ -62,6 +56,7 @@ Or even better: It would be great if you would simply fork this project and send
 
 
 ## Pull and fetch & merge changes
+[[back to top](#table-of-contents)]
 
 
 
@@ -71,6 +66,7 @@ Or even better: It would be great if you would simply fork this project and send
 
 
 ### Automatic pull for subdirectories
+[[back to top](#table-of-contents)]
 
 
 Shell command to pull changes from the remote for all
@@ -88,6 +84,7 @@ For your convenience - since the syntax may not be easy to remember - you can pu
 
 
 ### Force to overwrite local files
+[[back to top](#table-of-contents)]
 
 Replace local changes with most recent contents from `HEAD`.
 
@@ -102,6 +99,7 @@ Fetches the most recent files from the remote and resets the master branch to th
 <br>
 
 ### Purging a file or directory from the entire git history
+[[back to top](#table-of-contents)]
 
 
 Deleting a file or directory from the Git history is - in my opinion - was an option that was not intended by its creator. However, sometimes large binary files can cause a repository to grow over multiple Gigabytes in size, and in this case it might be useful to delete those.
@@ -120,6 +118,7 @@ After that, you might want to commit your changes and clone the "slimmer" reposi
 	
 
 ## Connecting to GitHub and GitLab
+[[back to top](#table-of-contents)]
 
 
 <br>
@@ -127,6 +126,7 @@ After that, you might want to commit your changes and clone the "slimmer" reposi
 
 
 ###Connecting to GitHub and GitLab servers via SSH
+[[back to top](#table-of-contents)]
 
 
 If you want to communicate to the GitHub/GitLab servers via a "more secure" connections or if your are using a terminal that doesn't support `https`.  
@@ -138,6 +138,7 @@ If you want to communicate to the GitHub/GitLab servers via a "more secure" conn
 <br>
 
 ## Branching
+[[back to top](#table-of-contents)]
 
 
 <br>
@@ -146,6 +147,7 @@ If you want to communicate to the GitHub/GitLab servers via a "more secure" conn
 
 
 ### Branching Basics
+[[back to top](#table-of-contents)]
 
 
 Create a new branch called "develop"
@@ -183,12 +185,14 @@ Merge changes from new branch back into the master branch
 
 
 ## Committing Changes
+[[back to top](#table-of-contents)]
 
 <br>
 <br>
 
 
 ### Committing Basics
+[[back to top](#table-of-contents)]
 
 
 
@@ -214,6 +218,7 @@ Shorthand for adding all files and committing them in 1 command
 
 
 ### Remove files from commit
+[[back to top](#table-of-contents)]
 
 
 Removes staged (`add`ed files from the commit)
@@ -225,6 +230,7 @@ Removes staged (`add`ed files from the commit)
 
 
 ### View the commit log with different levels of detail
+[[back to top](#table-of-contents)]
 
 
 1) one line
@@ -272,6 +278,7 @@ Removes staged (`add`ed files from the commit)
 
     
 ### Summarizing/squashing commits
+[[back to top](#table-of-contents)]
  
 
  
@@ -321,6 +328,7 @@ After we save and close the editor, a new editor window will open where we can m
 <br>
 
 ## Links to useful external resources
+[[back to top](#table-of-contents)]
 
 
 **[Git Cheat Sheet](http://byte.kde.org/~zrusin/git/git-cheat-sheet-medium.png)**  
