@@ -15,7 +15,7 @@
     - [Committing Basics](#committing-basics)
     - [Remove files from commit](#remove-files-from-commit)
     - [View the commit log with different levels of detail](#view-the-commit-log-with-different-levels-of-detail)
-    - [Summarizing/squashing commits](#summarizing-squashing-commits)
+    - [Summarizing/squashing commits](#summarizingsquashing-commits)
 - [Links to useful external resources](#links-to-useful-external-resources)
 
 
