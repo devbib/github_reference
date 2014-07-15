@@ -1,5 +1,5 @@
-github_reference
-================
+#github_reference
+
 
 
 
@@ -18,7 +18,6 @@ Or even better: It would be great if you would simply fork this project and send
 
 <hr>
 
-<a id='sections'></a>
 
 ## Sections
 
@@ -59,42 +58,20 @@ Or even better: It would be great if you would simply fork this project and send
 <br>
 
 
-<a id='links'></a>
-
-## Links to useful external resources
-
-[[back to top]](#sections)
-
-####[Git Cheat Sheet](http://byte.kde.org/~zrusin/git/git-cheat-sheet-medium.png)
-This cheat sheet is probably something that you want to print out and pin to your wall right next to your monitor: All the most important Git commands on one page.
 
 
-####[git - the simple guide](http://rogerdudler.github.io/git-guide/)
-A very brief overview of the Git essentials as it headline says: "just a simple guide for getting started with git. no deep shit ;)".  
-In my opinion it is a little bit too "concise" to be a good introduction to Git for absolute beginners, but I think that this is a very good look-up reference for people who are just getting started.
 
-####[Pro Git](http://git-scm.com/book)
-Probably the most thorough resource about Git you can find. Its 200+ pages (in the free PDF eBook version) might be a little bit overwhelming for Git newbies, but I would still recommend the first 2 chapter as a good introduction to Git - and the rest of the book to the more advanced users.
-
-
-####[help.github.com](https://help.github.com)
-GitHub help pages are especially useful for everything that is about setting up a connection to the GitHub servers and managing	 your repositories.
-
-<br>
-<br>
-
-<a id='pull_fetch_merge'></a>
 ## Pull and fetch & merge changes
 
-[[back to top]](#sections)
 
+
+<br>
 <br>
 
 
-<a id='auto_pull'></a>
+
 ### Automatic pull for subdirectories
 
-[[back to top]](#sections)
 
 Shell command to pull changes from the remote for all
 subdirectories in the current directory.
@@ -109,9 +86,8 @@ For your convenience - since the syntax may not be easy to remember - you can pu
 <br>
 <br>
 
-<a id='force_overwrite'></a>	
+
 ### Force to overwrite local files
-[[back to top]](#sections)
 
 Replace local changes with most recent contents from `HEAD`.
 
@@ -122,15 +98,11 @@ Fetches the most recent files from the remote and resets the master branch to th
 	git fetch --all
 	git reset --hard origin/master
 	
-
-<a id='purge_hist'></a>
-
 <br>
 <br>
 
 ### Purging a file or directory from the entire git history
 
-[[back to top]](#sections)	
 
 Deleting a file or directory from the Git history is - in my opinion - was an option that was not intended by its creator. However, sometimes large binary files can cause a repository to grow over multiple Gigabytes in size, and in this case it might be useful to delete those.
 
@@ -145,18 +117,17 @@ After that, you might want to commit your changes and clone the "slimmer" reposi
 <br>
 <br>
 
-<a id='connecting'></a>	
+	
 
 ## Connecting to GitHub and GitLab
-[[back to top]](#sections)
+
 
 <br>
 <br>
 
-<a id='ssh'></a>
-####Connecting to GitHub and GitLab servers via SSH
 
-[[back to top]](#sections)
+###Connecting to GitHub and GitLab servers via SSH
+
 
 If you want to communicate to the GitHub/GitLab servers via a "more secure" connections or if your are using a terminal that doesn't support `https`.  
 
@@ -166,19 +137,16 @@ If you want to communicate to the GitHub/GitLab servers via a "more secure" conn
 <br>
 <br>
 
-<a id='branching'></a>
 ## Branching
 
-[[back to top]](#sections)
 
 <br>
 <br>
 
 
-<a id='branching_basics'></a>
-#### Branching Basics
 
-[[back to top]](#sections)
+### Branching Basics
+
 
 Create a new branch called "develop"
 
@@ -213,18 +181,16 @@ Merge changes from new branch back into the master branch
 <br>
 <br>	
 
-<a id='committing'></a>
+
 ## Committing Changes
 
-[[back to top]](#sections)
-
 <br>
 <br>
 
-<a id='committing_basics'></a>
-#### Committing Basics
 
-[[back to top]](#sections)
+### Committing Basics
+
+
 
 Add individual files
 
@@ -246,10 +212,9 @@ Shorthand for adding all files and committing them in 1 command
 <br>
 
 
-<a id='committing_remove'></a>
-#### Remove files from commit
 
-[[back to top]](#sections)
+### Remove files from commit
+
 
 Removes staged (`add`ed files from the commit)
 
@@ -258,11 +223,9 @@ Removes staged (`add`ed files from the commit)
 <br>
 <br>
 
-<a id='committing_log'></a>
 
-#### View the commit log with different levels of detail
+### View the commit log with different levels of detail
 
-[[back to top]](#sections)
 
 1) one line
 
@@ -306,11 +269,11 @@ Removes staged (`add`ed files from the commit)
 <br>
 <br>
 
-<a id='committing_squash'></a>   
+
     
-#### Summarizing/squashing commits
+### Summarizing/squashing commits
  
-[[back to top]](#sections)
+
  
 **Warning:** This should only be done for local commits that you haven't been uploaded to a remote, yet.
 
@@ -351,3 +314,29 @@ Now, we change the first 3 lines to summarize all 3 commits into the latest comm
 	squash ca6b353 created a.txt and b.txt
 	
 After we save and close the editor, a new editor window will open where we can modify the commit message and the `rebase` should be successfully completed.
+
+<br>
+<br>
+<br>
+<br>
+
+## Links to useful external resources
+
+
+**[Git Cheat Sheet](http://byte.kde.org/~zrusin/git/git-cheat-sheet-medium.png)**  
+This cheat sheet is probably something that you want to print out and pin to your wall right next to your monitor: All the most important Git commands on one page.
+
+
+**[git - the simple guide](http://rogerdudler.github.io/git-guide/)**  
+A very brief overview of the Git essentials as it headline says: "just a simple guide for getting started with git. no deep shit ;)".  
+In my opinion it is a little bit too "concise" to be a good introduction to Git for absolute beginners, but I think that this is a very good look-up reference for people who are just getting started.
+
+**[Pro Git](http://git-scm.com/book)**  
+Probably the most thorough resource about Git you can find. Its 200+ pages (in the free PDF eBook version) might be a little bit overwhelming for Git newbies, but I would still recommend the first 2 chapter as a good introduction to Git - and the rest of the book to the more advanced users.
+
+
+**[help.github.com](https://help.github.com)**  
+GitHub help pages are especially useful for everything that is about setting up a connection to the GitHub servers and managing	 your repositories.
+
+<br>
+<br>
