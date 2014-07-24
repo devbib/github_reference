@@ -7,6 +7,7 @@
     - [Automatic pull for subdirectories](#automatic-pull-for-subdirectories)
     - [Force to overwrite local files](#force-to-overwrite-local-files)
     - [Purging a file or directory from the entire git history](#purging-a-file-or-directory-from-the-entire-git-history)
+    - [Keeping both files separate at merge conflict](#Keeping-both-files-separate-at-merge-conflict)
 - [Connecting to GitHub and GitLab](#connecting-to-github-and-gitlab)
     - [Connecting to GitHub and GitLab servers via SSH](#connecting-to-github-and-gitlab-servers-via-ssh)
 - [Branching](#branching)
@@ -115,7 +116,39 @@ After that, you might want to commit your changes and clone the "slimmer" reposi
 <br>
 <br>
 
-	
+### Keeping both files separate at merge conflict
+[[back to top](#table-of-contents)]	
+
+	 * branch            master     -> FETCH_HEAD
+	Auto-merging README.md
+	CONFLICT (content): Merge conflict in README.md
+	Automatic merge failed; fix conflicts and then commit the result.
+
+In cases of an automatic merge conflicts which causes hundreds or thousands of conflicts to fix manually, you maybe want to decide to keep both files separate, or either one of them (without the conflict notes inserted).  
+
+Here is how to keep your current local file:
+
+	git checkout --ours README.md 
+
+And this command can be used to keep just the file that was about to merged in:
+
+	git checkout --theirs README.md
+
+
+
+Auto-merged index.html
+CONFLICT (content): Merge conflict in index.html
+Automatic merge failed; fix conflicts and then commit the result.
+There’s two unmerged files here. According to the git checkout manpage, there’s a --theirs and --ours options on the command. The former will keep the version of the file that you merged in, and the other will keep the original one we had.
+The following commands will keep the original file for index.html, and then use the merged in file only for _layouts/default.html.
+git checkout --ours index.html
+git checkout --theirs _layouts/default.html
+
+
+<br>
+<br>
+<br>
+<br>
 
 ## Connecting to GitHub and GitLab
 [[back to top](#table-of-contents)]
