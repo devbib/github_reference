@@ -8,6 +8,7 @@
     - [Force to overwrite local files](#force-to-overwrite-local-files)
     - [Purging a file or directory from the entire git history](#purging-a-file-or-directory-from-the-entire-git-history)
     - [Keeping both files separate at merge conflict](#keeping-both-files-separate-at-merge-conflict)
+    - [Getting updates from the original project after forking](getting-updates-from-the-original-project-after-forking)
 - [Connecting to GitHub and GitLab](#connecting-to-github-and-gitlab)
     - [Connecting to GitHub and GitLab servers via SSH](#connecting-to-github-and-gitlab-servers-via-ssh)
 - [Branching](#branching)
@@ -143,6 +144,21 @@ Thereâ€™s two unmerged files here. According to the git checkout manpage, thereâ
 The following commands will keep the original file for index.html, and then use the merged in file only for _layouts/default.html.
 git checkout --ours index.html
 git checkout --theirs _layouts/default.html
+
+<br>
+<br>
+
+### Getting updates from the original project after forking
+[[back to top](#table-of-contents)]	
+
+1) Add the original repository as a remote
+
+	cd onyourlocaldrive/repo_name
+	git remote add upstream git://github.com/username/repo_name.git
+
+2) Then you can pull from it via:
+	
+	git merge upstream/master master
 
 
 <br>
