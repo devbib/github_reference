@@ -115,6 +115,9 @@ After you made changes in the `featX` branch, push it to your remote.
 	 
 Now, the developer can send the creator a pull request (via the web interface), and the creator merges the topic branch (here: `featX`) into the master branch after reviewing the changes.
 
+![](./images/pull_request.png)
+
+
 <br>
 <br>
 
