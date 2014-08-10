@@ -2,6 +2,10 @@
 #Table of Contents
 
 - [About this repository](#about-this-repository)
+
+- [Collaborating](#collaborating)
+	- [The Pull-Request workflow](#the-pull-request-workflow) 
+
     
 - [Pull and fetch & merge changes](#pull-and-fetch-merge-changes)
     - [Automatic pull for subdirectories](#automatic-pull-for-subdirectories)
@@ -9,15 +13,19 @@
     - [Purging a file or directory from the entire git history](#purging-a-file-or-directory-from-the-entire-git-history)
     - [Keeping both files separate at merge conflict](#keeping-both-files-separate-at-merge-conflict)
     - [Getting updates from the original project after forking](getting-updates-from-the-original-project-after-forking)
+
 - [Connecting to GitHub and GitLab](#connecting-to-github-and-gitlab)
     - [Connecting to GitHub and GitLab servers via SSH](#connecting-to-github-and-gitlab-servers-via-ssh)
+
 - [Branching](#branching)
     - [Branching Basics](#branching-basics)
+
 - [Committing Changes](#committing-changes)
     - [Committing Basics](#committing-basics)
     - [Remove files from commit](#remove-files-from-commit)
     - [View the commit log with different levels of detail](#view-the-commit-log-with-different-levels-of-detail)
     - [Summarizing/squashing commits](#summarizingsquashing-commits)
+
 - [Links to useful external resources](#links-to-useful-external-resources)
 
 
@@ -54,8 +62,61 @@ Or even better: It would be great if you would simply fork this project and send
 <br>
 
 
+## Collaborating
+[[back to top](#table-of-contents)]
+
+<br>
+<br>
+
+### The Pull-Request workflow 
+[[back to top](#table-of-contents)]
+
+Below, you'll find a brief overview of the pull-request workflow: The general workflow for collaborating on GitHub. 
 
 
+#### 1)
+The creator creates a new project (e.g., "https://github.com/creator/hello-world.git").
+
+#### 2)
+A developer forks the project to his own GitHub account (e.g., "https://github.com/developer/hello-world.git") via the web interface.
+
+![](./images/forking.png)
+
+#### 3)
+ 
+Next, the developer clones the forked GitHub repository to his local machine.
+
+- `git clone https://github.com/developer/hello-world.git`
+
+#### 4)
+The developer adds an "upstream" remote to get any changes in the master branch from the original project.
+
+- `git remote add upstream https://github.com/creator/hello-world.git`
+
+Now, changes from the master branch of the original project can be pulled and merged via
+	
+- `git fetch upstream`
+- `git merge upstream/master`
+
+#### 5)
+
+The developer creates a new branch to implement a new feature
+
+- `git branch featX` (creates new branch)
+- `git checkout featX` (switches to new branch in order to work on it)  
+
+After you made changes in the `featX` branch, push it to your remote.
+
+- `git add .`
+- `git commit -m 'implemented feature X'`
+- `git push origin featX`
+
+#### 6) 
+	 
+Now, the developer can send the creator a pull request (via the web interface), and the creator merges the topic branch (here: `featX`) into the master branch after reviewing the changes.
+
+<br>
+<br>
 
 ## Pull and fetch & merge changes
 [[back to top](#table-of-contents)]
