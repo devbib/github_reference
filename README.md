@@ -13,6 +13,7 @@
     - [Purging a file or directory from the entire git history](#purging-a-file-or-directory-from-the-entire-git-history)
     - [Keeping both files separate at merge conflict](#keeping-both-files-separate-at-merge-conflict)
     - [Getting updates from the original project after forking](getting-updates-from-the-original-project-after-forking)
+    - [Resetting a remote back to the last push](#resetting-a-remote-back-to-the-last-push)
 
 - [Connecting to GitHub and GitLab](#connecting-to-github-and-gitlab)
     - [Connecting to GitHub and GitLab servers via SSH](#connecting-to-github-and-gitlab-servers-via-ssh)
@@ -224,6 +225,17 @@ git checkout --theirs _layouts/default.html
 	
 	git merge upstream/master master
 
+<br>
+<br>
+
+
+### Resetting a remote back to the last push
+[[back to top](#table-of-contents)]
+
+Accidents happen: Let's say we pushed changes accidentally to the remote (here: `master`) and want to reset it to the previous state (i.e., the last push).
+
+	git reset --hard <git hash>
+	git push -f origin master
 
 <br>
 <br>
