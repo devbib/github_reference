@@ -12,7 +12,7 @@
     - [Force to overwrite local files](#force-to-overwrite-local-files)
     - [Purging a file or directory from the entire git history](#purging-a-file-or-directory-from-the-entire-git-history)
     - [Keeping both files separate at merge conflict](#keeping-both-files-separate-at-merge-conflict)
-    - [Getting updates from the original project after forking](getting-updates-from-the-original-project-after-forking)
+    - [Getting updates from the original project after forking](#getting-updates-from-the-original-project-after-forking)
     - [Resetting a remote back to the last push](#resetting-a-remote-back-to-the-last-push)
 
 - [Connecting to GitHub and GitLab](#connecting-to-github-and-gitlab)
