@@ -223,6 +223,7 @@ git checkout --theirs _layouts/default.html
 
 2) Then you can pull from it via:
 	
+	git fetch upststream
 	git merge upstream/master master
 
 <br>
